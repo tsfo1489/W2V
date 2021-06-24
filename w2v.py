@@ -2,7 +2,7 @@ import pandas as pd
 from gensim.models.word2vec import Word2Vec
 from konlpy.tag import Okt
 from tqdm import tqdm
-train_data = pd.read_csv('scrapy.csv')
+train_data = pd.read_csv('output.csv')
 train_data = train_data.dropna(how = 'any')
 train_data['comment'] = train_data['comment'].str.replace("[^ㄱ-ㅎㅏ-ㅣ가-힣 ]","")
 stopwords = ['의','가','이','은','들','는','좀','잘','걍','과','도','를','으로','자','에','와','한','하다']
